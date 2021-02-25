@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.myapplication">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 允许程序访问WiFi网络信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 允许程序读写手机状态和身份 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 允许程序访问CellID或WiFi热点来获取粗略的位置 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 定位包、导航包需要的额外权限（注：基础权限也需要） -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MapActivity"
+            android:hardwareAccelerated="true"></activity>
+        <activity android:name=".BiometricActivity" />
+        <activity android:name=".MultiStateActivity" />
+        <activity android:name=".YoutTubeActivity" />
+        <activity
+            android:name=".DrawerLayout1Activity"
+            android:label="@string/title_activity_drawer_layout1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Coordinator3Activity"
+            android:label="@string/title_activity_coordinator3"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Coordinator2Activity"
+            android:label="@string/title_activity_coordinator2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".CoordinatorActivity"
+            android:label="@string/title_activity_coordinator"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".SVGActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- 声明定位service -->
+        <service android:name="com.amap.api.location.APSService" /> <!-- 高德地图 -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="6cf667afe95f268beef332cdabc666fb" />
+    </application>
+
+</manifest>
