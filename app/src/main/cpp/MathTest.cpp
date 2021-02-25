@@ -8,3 +8,11 @@ namespace _MATH{
         return (a + b ) * 2;
     }
 }
+
+void Person::setAge(int age) {
+    this->age = age;
+}
+
+int Person::getAge() {
+    return age;
+}

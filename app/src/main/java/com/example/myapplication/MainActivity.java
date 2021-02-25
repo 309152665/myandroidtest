@@ -20,7 +20,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void toSvg(View view){
         JniTools jniTools = new JniTools();
-        Toast.makeText(this , jniTools.addNum(1 , 3) + "" , Toast.LENGTH_LONG).show();
+        jniTools._init();
+
+        Toast.makeText(this , jniTools.addNum(1 , 3) + ", age : " + jniTools._getPersonAge() , Toast.LENGTH_LONG).show();
         Intent intent = new Intent(this , SVGActivity.class);
         startActivity(intent);
     }

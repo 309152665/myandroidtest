@@ -15,6 +15,22 @@ extern "C" {
 JNIEXPORT jint JNICALL Java_com_example_myapplication_jni_JniTools_addNum
   (JNIEnv *, jobject, jint, jint);
 
+/*
+ * Class:     com_example_myapplication_jni_JniTools
+ * Method:    init
+ * Signature: ()J
+ */
+JNIEXPORT jlong JNICALL Java_com_example_myapplication_jni_JniTools_init
+  (JNIEnv *, jobject);
+
+/*
+ * Class:     com_example_myapplication_jni_JniTools
+ * Method:    getPersonAge
+ * Signature: (J)I
+ */
+JNIEXPORT jint JNICALL Java_com_example_myapplication_jni_JniTools_getPersonAge
+  (JNIEnv *, jobject, jlong);
+
 #ifdef __cplusplus
 }
 #endif
